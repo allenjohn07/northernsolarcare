@@ -2,6 +2,7 @@
 @import "tw-animate-css";
 @import "shadcn/tailwind.css";
 @import "@fontsource-variable/geist";
+@import "leaflet/dist/leaflet.css";
 
 @custom-variant dark (&:is(.dark *));
 
@@ -125,7 +126,7 @@
     @apply bg-background text-foreground antialiased;
     }
   html {
-    @apply font-sans;
+    @apply font-sans scroll-smooth;
     }
 }
 
@@ -141,5 +142,10 @@
     );
     background-size: 18px 18px;
     background-position: -10px -10px;
+  }
+
+  .leaflet-container {
+    font-family: inherit;
+    z-index: 0;
   }
 }
