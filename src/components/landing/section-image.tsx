@@ -4,7 +4,7 @@ type SectionImageProps = {
   src: string;
   alt: string;
   className?: string;
-  aspectRatio?: "video" | "square" | "wide";
+  aspectRatio?: "section" | "video" | "square" | "wide";
   loading?: "lazy" | "eager";
 };
 
@@ -12,7 +12,7 @@ export function SectionImage({
   src,
   alt,
   className,
-  aspectRatio = "video",
+  aspectRatio = "section",
   loading = "lazy",
 }: SectionImageProps) {
   const aspectClass =
@@ -20,7 +20,9 @@ export function SectionImage({
       ? "aspect-square"
       : aspectRatio === "wide"
         ? "aspect-[21/9]"
-        : "aspect-video";
+        : aspectRatio === "video"
+          ? "aspect-video"
+          : "aspect-[3/2]";
 
   return (
     <div

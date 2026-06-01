@@ -14,6 +14,7 @@ import { useEffect } from "react";
 import { ImagePlaceholder } from "@/components/landing/image-placeholder";
 import { LocationMap } from "@/components/landing/location-map";
 import { Navbar } from "@/components/landing/navbar";
+import { ScrollToTop } from "@/components/landing/scroll-to-top";
 import { SectionImage } from "@/components/landing/section-image";
 import { Badge } from "@/components/ui/badge";
 import { Button, buttonVariants } from "@/components/ui/button";
@@ -754,9 +755,12 @@ export function LandingPage() {
               </div>
             </div>
 
-            <div className="mt-8 border-t border-border/80 pt-6 text-center text-xs text-muted-foreground">
-              © {new Date().getFullYear()} Northern Solar Care. All rights
-              reserved.
+            <div className="mt-8 flex items-center justify-between gap-4 border-t border-border/80 pt-6 text-xs text-muted-foreground">
+              <p className="text-start">
+                © {new Date().getFullYear()} Northern Solar Care. All rights
+                reserved.
+              </p>
+              <ScrollToTop />
             </div>
           </div>
         </footer>

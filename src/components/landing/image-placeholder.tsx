@@ -5,20 +5,22 @@ import { cn } from "@/lib/utils";
 type ImagePlaceholderProps = {
   label: string;
   className?: string;
-  aspectRatio?: "video" | "square" | "wide";
+  aspectRatio?: "section" | "video" | "square" | "wide";
 };
 
 export function ImagePlaceholder({
   label,
   className,
-  aspectRatio = "video",
+  aspectRatio = "section",
 }: ImagePlaceholderProps) {
   const aspectClass =
     aspectRatio === "square"
       ? "aspect-square"
       : aspectRatio === "wide"
         ? "aspect-[21/9]"
-        : "aspect-video";
+        : aspectRatio === "video"
+          ? "aspect-video"
+          : "aspect-[3/2]";
 
   return (
     <div
