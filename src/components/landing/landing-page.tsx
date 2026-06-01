@@ -529,7 +529,7 @@ export function LandingPage() {
                 <ImagePlaceholder
                   label="Photo placeholder: service vehicle with water supply equipment"
                   aspectRatio="square"
-                  className="w-full max-w-xs justify-self-center lg:justify-self-end"
+                  className="hidden w-full max-w-xs justify-self-center lg:block lg:justify-self-end"
                 />
               </div>
             </div>

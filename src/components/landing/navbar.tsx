@@ -2,6 +2,7 @@ import { Menu, X } from "lucide-react";
 import { useEffect, useState } from "react";
 
 import { buttonVariants } from "@/components/ui/button";
+import { siteBrand } from "@/lib/site-brand";
 import { cn } from "@/lib/utils";
 
 const navLinks = [
@@ -33,9 +34,20 @@ export function Navbar() {
       >
         <a
           href="#"
-          className="text-base font-semibold tracking-tight text-foreground"
+          className="flex items-center gap-1.5 md:gap-2 text-base font-semibold tracking-tight text-foreground sm:gap-1.5"
         >
-          Northern Solar Care
+          <img
+            src={siteBrand.logo.src}
+            alt={siteBrand.logo.alt}
+            width={siteBrand.logo.size}
+            height={siteBrand.logo.size}
+            className="shrink-0 rounded-md object-cover mb-1"
+            style={{
+              width: siteBrand.logo.size,
+              height: siteBrand.logo.size,
+            }}
+          />
+          <span>Northern Solar Care</span>
         </a>
 
         <nav className="hidden items-center gap-1 md:flex" aria-label="Main">
